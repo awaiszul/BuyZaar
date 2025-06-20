@@ -1,0 +1,135 @@
+.sale-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-bottom: 3px solid red;
+  background-color: #fff;
+  font-family: 'Lora', sans-serif;
+}
+
+.sale-section .left {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e53935;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.sale-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 40px;
+  background-color: #fff;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sale-left {
+  flex: 1;
+  /* min-width: 300px; */
+}
+
+.sale-left img {
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.sale-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sale-right h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #2c2c2c;
+  font-weight: bold;
+}
+
+.sale-right p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+  font-weight: 600;
+}
+
+.sale-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.sale-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.sale-features .icon {
+  background-color: #6A1B9A;
+  color: #fff;
+  padding: 10px;
+  font-size: 45px;
+  border-radius: 50%;
+}
+
+.avail-now-btn {
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #b71c1c;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.avail-now-btn:hover {
+  background-color: #c62828;
+  box-shadow: 0 4px 0 #8e0000;
+  transform: translateY(-2px);
+}
+
+.avail-now-btn:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+@media (max-width: 768px) {
+  .sale-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sale-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sale-left img {
+    width: 90%;
+  }
+
+  .sale-right {
+    text-align: center;
+  }
+}

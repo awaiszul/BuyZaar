@@ -1,0 +1,75 @@
+.countdown-box {
+  display: flex;
+  gap: 20px;
+  /* margin: 2px; */
+  flex-wrap: wrap; /* Wrap on small screens */
+  /* justify-content: center; */
+}
+
+/* Base style */
+.time-box {
+  background: linear-gradient(145deg, #1c1c1c, #2b2b2b);
+  border-radius: 50%;
+  padding: 20px;
+  color: #fff;
+  font-size: 24px;
+  width: 75px;
+  height: 75px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5),
+              -5px -5px 15px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.time-box .label {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  opacity: 0.7;
+}
+
+/* Hover effect */
+.time-box:hover {
+  transform: translateY(-5px);
+}
+.time-box:hover .label {
+  color: #ff6347;
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 768px) {
+  .countdown-box {
+    gap: 15px;
+    justify-content: center;
+  }
+  .time-box {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .time-box .label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-box {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .time-box {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .time-box .label {
+    font-size: 0.6rem;
+  }
+}

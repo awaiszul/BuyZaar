@@ -1,0 +1,139 @@
+/* Navbar base style */
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: white;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 1.5rem;
+  color: #6A1B9A;
+  font-weight: bold;
+}
+
+.menu-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Lora', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  color: #ff6347;
+}
+
+.menu-item .icon {
+  color: #6A1B9A;
+}
+
+/* Searchbar */
+.searchbar {
+  position: relative;
+  width: 250px;
+}
+
+.searchbar input {
+  width: 100%;
+  border: 2px solid #6A1B9A;
+  padding: 10px 40px 10px 10px;
+  border-radius: 25px;
+  font-family: 'Lora', sans-serif;
+}
+
+.searchbar button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #6A1B9A;
+  cursor: pointer;
+}
+
+.searchbar button:hover {
+  color: #ff6347;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #6A1B9A;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 240px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: 0.3s ease;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #6A1B9A;
+  font-family: 'Lora', sans-serif;
+}
+
+.sidebar-item:hover {
+  color: #ff6347;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .Navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .searchbar {
+    width: 100%;
+    max-width: 300px;
+  }
+}

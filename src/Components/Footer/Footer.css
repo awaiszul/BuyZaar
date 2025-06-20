@@ -1,0 +1,76 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+  border-bottom: 2px solid #e91e63;
+  padding-bottom: 5px;
+}
+
+.footer-column p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li:hover {
+  color: #e91e63;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 5px;
+}
+
+.social {
+  font-size: 1.5rem;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social:hover {
+  color: #e91e63;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #aaa;
+}

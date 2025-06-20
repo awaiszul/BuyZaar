@@ -1,0 +1,133 @@
+/* src/components/WishlistPage.css */
+
+.wishlist-container {
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.wishlist-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist-empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.wishlist-grid {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* ✅ Responsive columns */
+@media (min-width: 1024px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wishlist-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+}
+
+.wishlist-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.wishlist-product-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.wishlist-product-detail {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.wishlist-product-price {
+  font-size: 1rem;
+  color: #10b981;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.wishlist-btn-cart,
+.wishlist-btn-remove,
+.wishlist-btn-buy {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wishlist-btn-cart {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.wishlist-btn-cart:hover {
+  background-color: #2563eb;
+}
+
+.wishlist-btn-remove {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.wishlist-btn-remove:hover {
+  background-color: #fecaca;
+}
+
+.wishlist-btn-buy {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.wishlist-btn-buy:hover {
+  background-color: #d97706;
+}
