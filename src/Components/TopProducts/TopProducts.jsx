@@ -24,7 +24,7 @@ const TopProducts = () => {
   }));
   // console.log(TopProduct);
   return (
-    <div className="top-products">
+    <div className="top-products ease-in-out" data-aos="slide-up">
       <div className="top-products-wrapper">
         {/* LEFT SIDE - Heading */}
         <div className="left-content">

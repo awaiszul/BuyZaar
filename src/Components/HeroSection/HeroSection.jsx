@@ -31,12 +31,12 @@ const HeroSection = () => {
   // Countdown timer in seconds
   const navigate = useNavigate();
   return (
-    <div className="slider">
+    <div className="slider" data-aos="fade-up">
       <Slider {...sliderSettings}>
         {images.map((item) => (
           <div key={item.id} className="slider-item">
             <img src={item.image} alt={item.alt} />
-            <div className="slider-content">
+            <div className="slider-content" data-aos="fade-up">
               <h1>Big Sale is Live!</h1>
               <p>Up to 70% Off on All Products</p>
               <CountDown/>

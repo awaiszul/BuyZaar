@@ -21,7 +21,7 @@ const CountDown = () => {
   return (
     <>
       <div className="countdown-box">
-                <div className="time-box">
+                <div className="time-box" data-aos="flip-up">
                   <span className="time">{formatTime(hours)}</span>
                 </div>
                 <div className="time-box">

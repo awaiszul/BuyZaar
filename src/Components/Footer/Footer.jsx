@@ -22,7 +22,7 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="footer">
+    <footer className="footer" data-aos="fade-right">
       {/* Top Section */}
       <div className="footer-top">
         <div className="footer-column">

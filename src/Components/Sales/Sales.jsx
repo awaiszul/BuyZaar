@@ -6,7 +6,7 @@ import { FaCheckCircle, FaShippingFast, FaUndoAlt, FaHeadset } from 'react-icons
 const Sales = () => {
   return (
     <>
-      <div className="sale-section">
+      <div className="sale-section ease-in-out" data-aos="zoom-in">
         <div className="left">
           <span role="img" aria-label="fire">
             🔥

@@ -15,8 +15,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import MyWishlistProvider from './Components/ContextAPI/ContextAPI';
 import WishlistPage from './Components/WishlistPage/WishlistPage';
 import Cart from './Components/Cart/Cart';
+import  { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <Header />

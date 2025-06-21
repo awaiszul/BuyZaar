@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="Navbar">
+      <div className="Navbar" data-aos="zoom-in-left">
         {/* Hamburger (mobile only) */}
         <div className="hamburger" onClick={toggleSidebar}>
           <FiMenu />
@@ -60,7 +60,7 @@ const Navbar = () => {
         </div>
 
         {/* Searchbar */}
-        <div className="searchbar">
+        <div className="searchbar" data-aos="zoom-in-right">
           <input
             type="text"
             placeholder="Search..."

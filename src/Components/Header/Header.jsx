@@ -14,18 +14,18 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <div className="hright">
+        <div className="hright" data-aos="fade-right">
           <FaShoppingCart size={24} color="#FF4C60" />
           <span className="logo" onClick={() => navigate("/")}>
             BuyZaar
           </span>
         </div>
-        <div className="typewriter">
+        <div className="typewriter" data-aos="fade-down">
           <h1>Welcome to Our brand new Website</h1>
         </div>
-        <div className="hleft">
+        <div className="hleft" data-aos="fade-left">
           {/* Wishlist Icon */}
-          <div className="icon-wrapper">
+          <div className="icon-wrapper" >
             <Link to="/wishlist" className="icon-link">
               <FiHeart className="icon" />
               {wishlist.length > 0 && (
