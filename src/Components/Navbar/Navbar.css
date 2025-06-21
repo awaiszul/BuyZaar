@@ -50,11 +50,15 @@
 .searchbar input {
   width: 100%;
   border: 2px solid #6A1B9A;
-  padding: 10px 40px 10px 10px;
-  border-radius: 25px;
+  padding: 5px 30px 5px 10px;
+  border-radius: 5px;
   font-family: 'Lora', sans-serif;
 }
-
+.searchbar input:hover {
+  outline: none;
+  border-color: #ff6347;
+  scale: 1.1;
+}
 .searchbar button {
   position: absolute;
   right: 8px;

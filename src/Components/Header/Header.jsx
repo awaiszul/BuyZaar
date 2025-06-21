@@ -24,6 +24,7 @@ const Header = () => {
           <h1>Welcome to Our brand new Website</h1>
         </div>
         <div className="hleft">
+          {/* Wishlist Icon */}
           <div className="icon-wrapper">
             <Link to="/wishlist" className="icon-link">
               <FiHeart className="icon" />
@@ -33,6 +34,7 @@ const Header = () => {
             </Link>
           </div>
 
+          {/* Cart Icon */}
           <div className="icon-wrapper">
             <Link to="/cart" className="icon-link">
               <HiOutlineShoppingCart className="icon" />
@@ -42,8 +44,9 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="icon-wrapper">
-            <HiOutlineUserCircle className="icon" />
+          {/* Profile Icon (Different Styling) */}
+          <div className="icon-wrapper profile-icon-wrapper">
+            <HiOutlineUserCircle className="icon profile-icon" />
           </div>
         </div>
       </div>

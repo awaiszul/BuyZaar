@@ -15,14 +15,13 @@ import "react-toastify/dist/ReactToastify.css";
 import { useContext } from "react";
 import { myContextAPI } from "../ContextAPI/ContextAPI";
 
-
 const TopProducts = () => {
   const productsWithId = products.map((item, index) => ({
-  ...item,
-  id: index + 1, // 👈 Adds id: 1, 2, 3, ...
-}));
+    ...item,
+    id: index + 1, // 👈 Adds id: 1, 2, 3, ...
+  }));
 
-  const {addToWishlist, addToCart} = useContext(myContextAPI);
+  const { addToWishlist, addToCart } = useContext(myContextAPI);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const category = searchParams.get("category");
@@ -77,11 +76,22 @@ const TopProducts = () => {
                   <h3>{product.title}</h3>
                   <p>{product.detail}</p>
                   <div className="icons">
-                    <HiOutlineShoppingCart className="cart-icon" onClick={()=>addToCart(product)} />
-                    <span>Add to Cart</span>
-                    <FiHeart className="heart-icon" onClick={()=>addToWishlist(product)} />
-                    <span>Wishlist</span>
+                    <div
+                      className="cart-wrapper"
+                      onClick={() => addToCart(product)}
+                    >
+                      <HiOutlineShoppingCart className="cart-icon" />
+                      <span>Add to Cart</span>
+                    </div>
+                    <div
+                      className="wishlist-wrapper"
+                      onClick={() => addToWishlist(product)}
+                    >
+                      <FiHeart className="heart-icon" />
+                      <span>Wishlist</span>
+                    </div>
                   </div>
+
                   <div className="shop-now-wrapper">
                     <button className="shop-now-btn">Buy Now</button>
                   </div>

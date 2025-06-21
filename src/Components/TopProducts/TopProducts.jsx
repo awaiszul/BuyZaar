@@ -8,20 +8,22 @@ import { FiHeart } from "react-icons/fi";
 import { useContext } from "react";
 import { myContextAPI } from "../ContextAPI/ContextAPI";
 const TopProducts = () => {
-  const {wishlist,
-        addToWishlist,
-        removeWishlist,
-        cart,
-        addToCart,
-        removeFromCart,} = useContext(myContextAPI);
+  const {
+    wishlist,
+    addToWishlist,
+    removeWishlist,
+    cart,
+    addToCart,
+    removeFromCart,
+  } = useContext(myContextAPI);
   // Sirf 6 products dikha rahe hain example ke liye
   const navigate = useNavigate();
   const visibleProducts = TopProduct.slice(0, 10).map((item, index) => ({
-  ...item,
-  id: index + 1,}));
+    ...item,
+    id: index + 1,
+  }));
   // console.log(TopProduct);
   return (
-    
     <div className="top-products">
       <div className="top-products-wrapper">
         {/* LEFT SIDE - Heading */}
@@ -45,18 +47,35 @@ const TopProducts = () => {
               <h3>{product.title}</h3>
               <p>{product.detail}</p>
               <div className="icons">
-                <HiOutlineShoppingCart className="cart-icon" onClick={()=>addToCart(product)} /> <span>Add to Cart</span>
-                <FiHeart className="heart-icon" onClick={()=>addToWishlist(product)} /> <span>Wishlist</span>
+                <div
+                  className="cart-wrapper"
+                  onClick={() => addToCart(product)}
+                >
+                  <HiOutlineShoppingCart className="cart-icon" />
+                  <span>Add to Cart</span>
+                </div>
+                <div
+                  className="wishlist-wrapper"
+                  onClick={() => addToWishlist(product)}
+                >
+                  <FiHeart className="heart-icon" />
+                  <span>Wishlist</span>
+                </div>
               </div>
-               <div className="shop-now-wrapper">
-                    <button className="shop-now-btn">Buy Now</button>
-                  </div>
+
+              <div className="shop-now-wrapper">
+                <button className="shop-now-btn">Buy Now</button>
+              </div>
             </div>
           ))}
         </div>
       </div>
-      <button className="load-more-btn" onClick={()=> navigate("/all-products")} >Load More</button>
-
+      <button
+        className="load-more-btn"
+        onClick={() => navigate("/all-products")}
+      >
+        Load More
+      </button>
     </div>
   );
 };

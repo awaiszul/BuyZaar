@@ -105,7 +105,7 @@
 }
 
 .cart-icon:hover,
-.heart-icon:hover {
+.heart-icon:hover, .cart-wrapper:hover, .wishlist-wrapper:hover {
   color: #e91e63;
   transform: scale(1.2);
 }
@@ -175,6 +175,13 @@
   justify-content: center;
   margin-top: 15px;
 }
+.wishlist-wrapper, .cart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
 
 .shop-now-btn {
   background-color: #ff4e50;
